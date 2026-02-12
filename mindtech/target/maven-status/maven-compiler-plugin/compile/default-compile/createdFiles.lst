@@ -1,4 +1,5 @@
 com\team\build\mindtech\controller\UserController.class
 com\team\build\mindtech\model\request\UserRequest.class
 com\team\build\mindtech\model\request\CreateUserRequest.class
+com\team\build\mindtech\service\UserService.class
 com\team\build\mindtech\MindtechApplication.class
