@@ -1,9 +1,11 @@
 package com.team.build.mindtech.controller;
 
 import com.team.build.mindtech.model.request.UserRequest;
+import com.team.build.mindtech.model.response.UserResponse;
 import com.team.build.mindtech.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +16,10 @@ public class UserController {
         private UserService userService;
 
         @PostMapping//transforma seu metado em um endpoint e garante que os spring inicialize
-        public ResponseEntity registerUser(@RequestBody @Valid UserRequest userRequest) {
-                return userService.registerUser(userRequest);
+        public ResponseEntity<UserResponse> registerUser(@RequestBody @Valid UserRequest userRequest) {
+
+                return ResponseEntity.status(HttpStatus.CREATED).body( userService.registerUser(userRequest));
+
     }
 
 //    @PostMapping("/{name}/{email}/{senha}") // esse usar : "/"
