@@ -1,4 +1,4 @@
-package com.team.build.mindtech.domain.repository;
+package com.team.build.mindtech.infrastructure.repository;
 
 import com.team.build.mindtech.infrastructure.entity.User;
 import org.springframework.data.repository.CrudRepository;

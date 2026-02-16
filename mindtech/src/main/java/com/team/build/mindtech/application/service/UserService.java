@@ -1,9 +1,9 @@
-package com.team.build.mindtech.domain.service;
+package com.team.build.mindtech.application.service;
 
 import com.team.build.mindtech.infrastructure.entity.User;
 import com.team.build.mindtech.application.dto.request.CreateUserRequest;
 import com.team.build.mindtech.application.dto.response.UserResponse;
-import com.team.build.mindtech.domain.repository.UserRepository;
+import com.team.build.mindtech.infrastructure.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

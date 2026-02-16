@@ -1,6 +1,6 @@
 package com.team.build.mindtech.infrastructure.handler;
 
-import com.team.build.mindtech.domain.exception.ApiError;
+import com.team.build.mindtech.domain.exception.ErrorException;
 import com.team.build.mindtech.domain.exception.FieldErrorDetail;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
 
     // 🔹 Bean Validation
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiError> handleValidation(
+    public ResponseEntity<ErrorException> handleValidation(
             MethodArgumentNotValidException ex,
             HttpServletRequest request) {
 
@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
                         error.getDefaultMessage()))
                 .toList();
 
-        ApiError apiError = new ApiError(
+        ErrorException errorException = new ErrorException(
                 "ValidationError",
                 "Erro de validação nos campos enviados",
                 details,
@@ -39,17 +39,17 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(apiError);
+                .body(errorException);
     }
 
 
     // 🔹 Erro genérico (fallback)
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiError> handleGeneric(
+    public ResponseEntity<ErrorException> handleGeneric(
             Exception ex,
             HttpServletRequest request) {
 
-        ApiError apiError = new ApiError(
+        ErrorException errorException = new ErrorException(
                 "InternalServerError",
                 "Ocorreu um erro inesperado",
                 null,
@@ -59,6 +59,6 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(apiError);
+                .body(errorException);
     }
 }
