@@ -1,4 +1,4 @@
-package com.team.build.mindtech.model.request;
+package com.team.build.mindtech.application.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

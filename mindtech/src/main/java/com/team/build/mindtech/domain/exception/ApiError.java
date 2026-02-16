@@ -1,4 +1,4 @@
-package com.team.build.mindtech.exception;
+package com.team.build.mindtech.domain.exception;
 
 import java.time.LocalDateTime;
 import java.util.List;

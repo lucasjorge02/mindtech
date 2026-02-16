@@ -1,6 +1,6 @@
-package com.team.build.mindtech.repository;
+package com.team.build.mindtech.domain.repository;
 
-import com.team.build.mindtech.model.entity.User;
+import com.team.build.mindtech.infrastructure.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Integer> {

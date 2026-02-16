@@ -1,6 +1,5 @@
-package com.team.build.mindtech.model.entity;
+package com.team.build.mindtech.infrastructure.entity;
 
-import com.team.build.mindtech.model.request.CreateUserRequest;
 import jakarta.persistence.*;
 
 @Entity

@@ -1,7 +1,7 @@
-package com.team.build.mindtech.exception.handler;
+package com.team.build.mindtech.infrastructure.handler;
 
-import com.team.build.mindtech.exception.ApiError;
-import com.team.build.mindtech.exception.FieldErrorDetail;
+import com.team.build.mindtech.domain.exception.ApiError;
+import com.team.build.mindtech.domain.exception.FieldErrorDetail;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
