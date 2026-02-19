@@ -1,4 +1,4 @@
-package com.team.build.mindtech.model.response;
+package com.team.build.mindtech.dto.response;
 
 
 

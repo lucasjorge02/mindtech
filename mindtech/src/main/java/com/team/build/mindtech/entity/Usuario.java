@@ -1,4 +1,4 @@
-package com.team.build.mindtech.model.entity;
+package com.team.build.mindtech.entity;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.team.build.mindtech.model.request;
+package com.team.build.mindtech.dto.request;
 
 
 public class CreateUserRequest {

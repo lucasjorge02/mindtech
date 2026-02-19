@@ -1,7 +1,7 @@
 package com.team.build.mindtech.controller;
 
-import com.team.build.mindtech.model.request.UserRequest;
-import com.team.build.mindtech.model.response.UserResponse;
+import com.team.build.mindtech.dto.request.UserRequest;
+import com.team.build.mindtech.dto.response.UserResponse;
 import com.team.build.mindtech.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
