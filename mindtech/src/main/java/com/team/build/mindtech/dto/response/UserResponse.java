@@ -1,4 +1,4 @@
-package com.team.build.mindtech.application.dto.response;
+package com.team.build.mindtech.dto.response;
 
 public record UserResponse(
         Integer id,

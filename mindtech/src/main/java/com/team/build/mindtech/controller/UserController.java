@@ -1,8 +1,8 @@
-package com.team.build.mindtech.infrastructure.controller;
+package com.team.build.mindtech.controller;
 
-import com.team.build.mindtech.application.dto.request.CreateUserRequest;
-import com.team.build.mindtech.application.dto.response.UserResponse;
-import com.team.build.mindtech.application.service.UserService;
+import com.team.build.mindtech.dto.request.CreateUserRequest;
+import com.team.build.mindtech.dto.response.UserResponse;
+import com.team.build.mindtech.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

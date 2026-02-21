@@ -1,31 +1,31 @@
-package com.team.build.mindtech.infrastructure.entity;
+package com.team.build.mindtech.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="usuario")
+@Table(name="usuarios")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, name = "nome")
+    @Column(name = "nome", nullable = false, length = 60)
     private String name;
 
-    @Column(nullable = false, name = "sobrenome")
+    @Column(name = "sobrenome", nullable = false, length = 60)
     private String surname;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 80)
     private String email;
 
-    @Column(nullable = false, name = "senha")
+    @Column(name = "senha", nullable = false, length = 45)
     private String password;
 
     public User() {
     }
 
-    public User(    String name, String surname, String email, String password) {
+    public User(String name, String surname, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;

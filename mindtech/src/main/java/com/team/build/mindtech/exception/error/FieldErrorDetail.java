@@ -1,4 +1,4 @@
-package com.team.build.mindtech.domain.exception;
+package com.team.build.mindtech.exception.error;
 
 public record FieldErrorDetail(
         String field,
