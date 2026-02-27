@@ -9,10 +9,10 @@ public final class UserMapper {
     private UserMapper() {}
 
     public static UserResponse toUserResponse(User user) {
-        return new UserResponse(user.getId(), user.getName(), user.getSurname(), user.getEmail(), user.getPassword());
+        return new UserResponse(user.getId(), user.getName(), user.getSurname(), user.getEmail());
     }
 
     public static User toUser(CreateUserRequest user) {
-        return new User(user.name(),  user.surname(), user.email(), user.password());
+        return new User(user.name(), user.surname(), user.email(), user.password());
     }
 }

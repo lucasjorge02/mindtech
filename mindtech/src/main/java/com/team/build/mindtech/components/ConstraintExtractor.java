@@ -1,4 +1,4 @@
-package com.team.build.mindtech.exception.extractor;
+package com.team.build.mindtech.components;
 
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;

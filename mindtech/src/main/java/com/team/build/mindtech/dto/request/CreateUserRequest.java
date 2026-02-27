@@ -19,6 +19,6 @@ public record CreateUserRequest(
         String email,
 
         @NotBlank(message = "O Campo 'password' não pode ser vazio ou nulo!")
-        @Size(max = 45, message = "O Campo 'password' deve ter ate 45 caracteres")
+        @Size(min = 8, max = 50, message = "O Campo 'password' deve ter entre 8 à 50 caracteres")
         String password
 ) {}
