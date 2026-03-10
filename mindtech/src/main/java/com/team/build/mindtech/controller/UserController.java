@@ -3,13 +3,17 @@ package com.team.build.mindtech.controller;
 import com.team.build.mindtech.dto.request.LoginRequest;
 import com.team.build.mindtech.dto.request.UserRequest;
 import com.team.build.mindtech.dto.response.LoginResponse;
+import com.team.build.mindtech.dto.response.TokenResponse;
 import com.team.build.mindtech.dto.response.UserResponse;
+import com.team.build.mindtech.entity.Usuario;
 import com.team.build.mindtech.service.LoginService;
 import com.team.build.mindtech.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController//essa anotação garante que os spring inicialize a minha controller
 @RequestMapping("/user")//contextualizando a rota minha controller
@@ -29,10 +33,16 @@ public class UserController {
         }
 
         @PostMapping("/login")
-        public ResponseEntity<LoginResponse> loginUser(@RequestBody @Valid LoginRequest loginRequest) {
-                LoginResponse login = loginService.login(loginRequest);
-                return ResponseEntity.ok(login);
+        public ResponseEntity<TokenResponse> loginUser(@RequestBody @Valid LoginRequest loginRequest) {
+                TokenResponse token = loginService.login(loginRequest);
+                return ResponseEntity.ok(token);
         }
+        @GetMapping
+        public ResponseEntity<List<Usuario>> findAll() {
+                return ResponseEntity.ok(userService.findAllByOrderByNomeAsc());
+        }
+
+
         //    @PostMapping("/{name}/{email}/{senha}") // esse usar : "/"
 //    public void registerUser(@PathVariable String name,@PathVariable String email,@PathVariable String senha)
 

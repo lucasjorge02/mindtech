@@ -8,6 +8,8 @@ import com.team.build.mindtech.mapper.UsuarioMapper;
 import com.team.build.mindtech.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     private final UsuarioRepository usuarioRepository;
@@ -22,5 +24,8 @@ public class UserService {
 
         Usuario usuario = usuarioRepository.save(UsuarioMapper.toUsuario(user));
         return UsuarioMapper.toUserResponse(usuario);
+    }
+    public List<Usuario> findAllByOrderByNomeAsc() {
+        return usuarioRepository.findAllByOrderByNomeAsc();
     }
 }
